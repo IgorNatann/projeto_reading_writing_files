@@ -66,10 +66,10 @@ Os testes foram realizados em um laptop equipado com um processador 13th Gen Int
 | --- | --- |
 | Bash + awk | 25 minutos |
 | Python | 20 minutos |
-| Python + Pandas | 263 sec |
-| Python + Dask | 155.62 sec  |
-| Python + Polars | 33.86 sec |
-| Python + Duckdb | 14.98 sec |
+| Python + Pandas | 1.18 sec |
+| Python + Dask | 0.79 sec  |
+| Python + Polars | 0.11 sec |
+| Python + Duckdb | 0.06 sec | 
 
 ## Conclusão
 
