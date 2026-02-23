@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "one-billion-row-challenge-python"
+name = "projeto_reading_writing_files"
 version = "0.1.0"
 description = ""
-authors = ["Luciano Filho <lvgalvaofilho@gmail.com>"]
+authors = ["Igor Natan <igornatan4@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
