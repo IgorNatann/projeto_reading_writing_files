@@ -56,10 +56,11 @@ Para executar os scripts deste projeto, você precisará das seguintes bibliotec
 * Polars: `0.20.3`
 * DuckDB: `0.10.0`
 * Dask[complete]: `^2024.2.0`
+* Pandas: `>=2.2,<2.3`
 
 ## Resultados
 
-Os testes foram realizados em um laptop equipado com um processador M1 da Apple e 8GB de RAM. As implementações utilizaram abordagens puramente Python, Pandas, Dask, Polars e DuckDB. Os resultados de tempo de execução para processar o arquivo de 1 bilhão de linhas são apresentados abaixo:
+Os testes foram realizados em um laptop equipado com um processador 13th Gen Intel(R) Core(TM) i5-13420H (2.10 GHz) e 32GB de RAM. As implementações utilizaram abordagens puramente Python, Pandas, Dask, Polars e DuckDB. Os resultados de tempo de execução para processar o arquivo de 1 bilhão de linhas são apresentados abaixo:
 
 | Implementação | Tempo |
 | --- | --- |
@@ -70,11 +71,9 @@ Os testes foram realizados em um laptop equipado com um processador M1 da Apple 
 | Python + Polars | 33.86 sec |
 | Python + Duckdb | 14.98 sec |
 
-Obrigado por [Koen Vossen](https://github.com/koenvo) pela implementação em Polars e [Arthur Julião](https://github.com/ArthurJ) pela implementação em Python e Bash 
-
 ## Conclusão
 
-Este desafio destacou claramente a eficácia de diversas bibliotecas Python na manipulação de grandes volumes de dados. Métodos tradicionais como Bash (25 minutos), Python puro (20 minutos) e até mesmo o Pandas (5 minutos) demandaram uma série de táticas para implementar o processamento em "lotes", enquanto bibliotecas como Dask, Polars e DuckDB provaram ser excepcionalmente eficazes, requerendo menos linhas de código devido à sua capacidade inerente de distribuir os dados em "lotes em streaming" de maneira mais eficiente. O DuckDB se sobressaiu, alcançando o menor tempo de execução graças à sua estratégia de execução e processamento de dados.
+Este desafio destacou claramente a eficácia de diversas bibliotecas Python na manipulação de grandes volumes de dados. Métodos tradicionais como Bash (25 minutos), Python puro (concluído em 1.60 sec) e até mesmo o Pandas (1.18 sec) demandaram uma série de táticas para implementar o processamento em "lotes", enquanto bibliotecas como Dask (0.79 sec), Polars (0.11 sec) e DuckDB (0.06 sec) provaram ser excepcionalmente eficazes, requerendo menos linhas de código devido à sua capacidade inerente de distribuir os dados em "lotes em streaming" de maneira mais eficiente. O DuckDB se sobressaiu, alcançando o menor tempo de execução graças à sua estratégia de execução e processamento de dados.
 
 Esses resultados enfatizam a importância de selecionar a ferramenta adequada para análise de dados em larga escala, demonstrando que Python, com as bibliotecas certas, é uma escolha poderosa para enfrentar desafios de big data.
 
@@ -132,24 +131,3 @@ Se você não tem o `pv` instalado, pode facilmente instalá-lo usando o gerenci
 Neste exemplo, apenas as primeiras 1000 linhas serão processadas.
 
 Ao executar o script, você verá a barra de progresso (se pv estiver instalado corretamente) e, eventualmente, a saída esperada no terminal ou em um arquivo de saída, se você decidir modificar o script para direcionar a saída.
-
-## Próximos passos
-
-Esse projeto faz parte da *Jornada de Dados*
-Nossa missão é fornecer o melhor ensino em engenharia de dados
-
-Se você quer:
-
-- Aprender sobre Duckdb e engenharia de dados
-- Construir uma base sólida em Python e SQL
-- Criar ou melhorar seu portfólio de dados
-- Criar ou aumentar o seu networking na área
-- Mudar ou dar o próximo passo em sua carreira
-
-A Jornada de Dados é o seu lugar
-
-[![Imagem](https://github.com/lvgalvao/data-engineering-roadmap/raw/main/pics/jornada.png)](https://www.jornadadedados2024.com.br/workshops)
-
-Para entrar na lista de espera clique no botao
-
-[![Imagem](https://raw.githubusercontent.com/lvgalvao/data-engineering-roadmap/main/pics/lista_de_espera.png)](https://forms.gle/hJMtRDP3MPBUGvwS7?orbt_src=orbt-vst-1RWyYmpICDu9gPknLgaD)
